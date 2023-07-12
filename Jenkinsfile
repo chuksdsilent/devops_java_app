@@ -7,11 +7,14 @@ pipeline{
     stages{
          
         stage('Git Checkout'){
-            script{
-                gitCheckout(
-                    branch: 'main',
-                    url: 'https://github.com/chuksdsilent/devops_java_app.git'
-                )
+            steps{
+
+                script{
+                    gitCheckout(
+                        branch: 'main',
+                        url: 'https://github.com/chuksdsilent/devops_java_app.git'
+                    )
+                }
             }
         }
     }
